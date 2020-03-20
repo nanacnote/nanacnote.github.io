@@ -259,3 +259,17 @@ body{
     color: blue;
     padding: 1%;
 }
+
+@media only screen and (max-width: 1160px){
+    body{
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 600px){
+    body{
+        position: relative;
+        height: 100%;
+        overflow: scroll;
+    }
+}
