@@ -60,8 +60,63 @@
             </div>
         </section>
     </div>
-    <div class="signup-form">
-        PENDING
+    <div id="signup-form" class="clearfix">
+        <div class="form-box-close">
+            <img src="images/close_icon.svg" alt="close_icon">
+        </div>
+        <section id="signup-form-top">
+            <h1 id="form-title"><span class="company-name-color-1">zyg</span><span class="company-name-color-2">zyg</span><span>&nbsp;</span><span>Signup Form</span></h1>
+            <p id="form-description">complete form below to start receiving curated links</p>
+        </section>
+        <section id="signup-form-bottom">
+            <form id="form-survey" action="">
+                <label id="form-name-label" for="form-name">Name</label></br>
+                <input id="form-name" type="text" name="name" placeholder="enter your name"></br></br>
+
+                <label id="form-email-label" for="form-email">E-mail</label></br>
+                <input id="form-email" type="text" name="email" placeholder="enter your email"></br></br>
+
+                <label id="form-age-label" for="form-age">Birthday</label></br>
+                <input id="form-age" name="birthday" onfocus="(this.type='date')" onblur="(this.type='')" placeholder="enter your birthdate"></br></br>
+
+                <label id="form-frequency-label" for="form-frequency">How often do you want links?</label></br>
+                <input type="radio" name="frequency" value="daily">
+                <label for="daily">Daily</label></br>
+                <input type="radio" name="frequency" value="weekly">
+                <label for="weekly">Weekly</label></br>
+                <input type="radio" name="frequency" value="monthly">
+                <label for="monthly">Monthly</label></br></br>
+
+                <label id="form-format-label" for="form-format">Which media format do you prefer to receive?</label></br>
+                <select id="form-format" name="format">
+                    <option disabled selected>select your preferred format?</option>
+                    <option value="any">Any</option>
+                    <option value="audio">Audio</option>
+                    <option value="text">Text</option>
+                    <option value="video">Video</option>
+                </select></br></br>
+
+                <label id="form-interest-label" for="form-interest">What are your interests?</label></br>
+                
+                <input type="checkbox" name="interests" value="arts_and_humanities">
+                <label for="interests">Arts & Humanities</label></br>
+                
+                <input type="checkbox" name="interests" value="economics_and_politics">
+                <label for="interests">Economics & Politcs</label></br>
+                
+                <input type="checkbox" name="interests" value="science_and_technology">
+                <label for="interests">Science & Technology</label></br>
+
+                <input type="checkbox" name="interests" value="spirituality_and_philosophy">
+                <label for="interests">Spirituality & Philosophy</label></br></br>
+
+                <label id="form-text-label" for="text">Any extra comments?</label></br>
+                <textarea name="text" id="form-text" rows="5" placeholder="enter comments here ..."></textarea></br></br>
+                <div id="submit-botton">
+                    <button id="form-submit" type="submit" class="rec-links">Submit</button>
+                </div>
+            </form>
+        </section>
     </div>
     <script src="form.js"></script>
 </body>
