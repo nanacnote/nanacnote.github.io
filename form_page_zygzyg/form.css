@@ -17,10 +17,10 @@ body{
     position: relative;
     background-image: url("images/background_image_1.svg");
     background-repeat: no-repeat;
-    /* background-size: auto; */
     background-size: 130% 120%;
     width: 100%;
     height: 100%;
+    overflow: scroll;
 }
 
 a{
@@ -139,7 +139,6 @@ a{
     font-weight: 900;
     padding: 0 20% 1% 10%;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
-    z-index: 1;
 }
 
 .heading-box>p:nth-child(2){
@@ -259,6 +258,89 @@ a{
 
 .open-about p{
     text-justify: auto;
+}
+
+/* signup form styling */
+#signup-form{
+    display: none;
+}
+
+.form-box-close img{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 5%;
+    height: auto;
+    float: left;
+}
+
+.signup-form-popup{
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    z-index: 1;
+    display: block !important;
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    width: 40%;
+    height: 85%;
+    overflow: scroll;
+    background: white;
+    padding-top: 2.5%;
+}
+
+#signup-form-top{
+    box-sizing: border-box;
+    text-align: right;
+    padding: 5% 5% 5% 5%;
+}
+
+#form-title{
+    font-size: xx-large;
+    margin-bottom: 1%;
+}
+
+.company-name-color-1{
+    color: #fe165f;
+}
+
+.company-name-color-2{
+    color: #16feb5;
+}
+
+#signup-form-bottom{
+    box-sizing: border-box;
+    padding: 5% 5% 5% 5%;
+}
+
+form label{
+    font-size: larger;
+}
+
+form input, textarea{
+    margin: 2.5% 2.5%;
+}
+
+#form-name, #form-email, #form-age{
+    width: 60%;
+    font-size: large;
+    border-bottom: solid 2px #d56665;
+}
+
+textarea{
+    width: 90%;
+    border: solid 2px #d56665;
+    font-size: large;
+}
+
+#submit-botton{
+    text-align: right;
+}
+
+#form-submit{
+    color: white;
+    font-size: larger;
+    font-weight: 600;
 }
 
 /* animation section  */
