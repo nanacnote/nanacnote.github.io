@@ -327,6 +327,12 @@ form input, textarea{
     border-bottom: solid 2px #d56665;
 }
 
+#form-format{
+    border: solid 2px #d56665;
+    margin: 2.5% 0 0 2.5%;
+    font-size: medium;
+}
+
 textarea{
     width: 90%;
     border: solid 2px #d56665;
