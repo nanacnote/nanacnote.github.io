@@ -1,0 +1,275 @@
+// variables declaration
+$font-family: 'Roboto Slab', serif;
+$font-family-logo: 'Bree Serif', serif;
+$font-size-default: 1.25vw;
+$font-size-logo: 250%;
+$font-size-medium: 175%;
+$font-size-links: 125%;
+
+$custom-back: #323232;
+$custom-grey: #6f6f6f;
+
+// mixins
+@mixin product-styling{
+    box-sizing: border-box;
+    border: solid 1px $custom-back;
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 50%;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-info{
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 70%;
+        height: 100%;
+        background: white;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 1;
+
+        div{
+            position: relative;
+            text-align: center;
+            margin: auto;
+
+            span{
+                display: block;
+                margin: auto;
+
+                .span-1{
+                    font-size: $font-size-links;
+                }
+                
+                .span-2{
+                    padding: 0 0 6% 0;
+                }
+
+                .span-3{
+                    background: $custom-back;
+                    width: 50%;
+                    height: 3px;
+                    margin: auto;
+                }
+
+            }
+
+            &>p{
+                padding: 3% 0 6% 0;
+                margin: auto;
+                font-size: $font-size-links;
+            }
+
+            li{
+                background: $custom-back;
+                color: white;
+                font-size: $font-size-links;
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+
+    &:hover .product-info{
+        visibility: visible;
+        opacity: 0.95;
+        transition: opacity 500ms ease-in;
+    }
+}
+
+// reset html 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+// body styling
+body {
+    position: absolute;
+    background: url("images/background_sickgallery.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    font-family: $font-family;
+    font-size: $font-size-default;
+    color: $custom-back;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 1.5%;
+    overflow: auto;
+
+    ul, li{
+        list-style: none;
+    }
+
+    .left-section{
+        position: relative;
+        box-sizing: border-box;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 3% 0 0;
+
+        .products-display{
+            display: block;
+            position: relative;
+            box-sizing: border-box;
+            height: 95%;
+            border: solid 1px $custom-back;
+            padding: 1%;
+
+            .grid-container{
+                position: relative;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-gap: 1.5%;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: auto auto;
+            }
+
+            .grid-item-1{
+                @include product-styling;
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+            }
+
+            .grid-item-2{
+                @include product-styling;
+                grid-column: 3 / 5;
+            }
+
+            .grid-item-3{
+                @include product-styling;
+            }
+
+            .grid-item-4{
+                @include product-styling;
+            }
+
+            .grid-item-5{
+                @include product-styling;
+            }
+
+            .grid-item-6{
+                @include product-styling;
+                grid-column: 2 / 5;
+            }
+
+        }
+        
+        .socials-footer{
+            box-sizing: border-box;
+            height: 5%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5% 0 0 0;
+        }
+    }
+
+    .right-section{
+        position: relative;
+        box-sizing: border-box;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2% 0 4% 0;
+
+        .right-section-top{
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            .company-header{
+                box-sizing: border-box;
+                font-family: $font-family-logo;
+                font-size: $font-size-logo;
+                line-height: 100%;
+                border-bottom: solid 1px $custom-back;
+                padding: 0 0 5% 0;
+                margin: 0 0 5% 0;
+            }
+
+            .major-links{
+                box-sizing: border-box;
+                font-size: $font-size-links;
+            }
+        }
+
+        .right-section-bottom{
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            .minor-links{
+                box-sizing: border-box;
+                font-size: $font-size-links;
+                align-self: flex-end;
+                color: $custom-grey;
+                margin: 0 0 15% 0;
+            }
+
+            .checkout-basket{
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+
+                .checkout-basket-header{
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: $font-size-links;
+                    border-top: solid 1px $custom-back;
+                    border-bottom: solid 1px $custom-back;
+                    padding: 3% 0 3% 0;
+                }
+
+                .checkout-basket-body{
+                    box-sizing: border-box;
+                    height: 4.25vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-end;
+                    font-size: $font-size-default;
+                    margin: 5% 0 5% 0;
+                    overflow: scroll;
+
+                    p{
+                        text-align: right;
+                    }
+                }
+
+                .checkout-basket-footer{
+                    box-sizing: border-box;
+                    height: 3.5vw;
+                    background: $custom-back;
+                    color: white;
+                    text-align: right;
+                    padding: 3%;
+                }
+
+            }
+        }
+
+    }
+}
