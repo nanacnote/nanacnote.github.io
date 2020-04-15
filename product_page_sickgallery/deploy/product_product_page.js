@@ -7,6 +7,11 @@ var product_picture = document.querySelectorAll(".grid-item>img, .grid-item>.pro
 var buy_button = document.querySelectorAll(".buy-button");
 var socials_icons = document.querySelectorAll(".instagram-icon, .facebook-icon");
 
+// all variables below product product page
+var menu_icon = document.querySelector(".menu-icon-wrapper");
+var menu_icon_transition = document.querySelectorAll(".menu-icon");
+var sandwich_popup = document.querySelector(".sandwich-icon-popup-menu");
+
 
 // all function below
 function showPopupMajor(){
@@ -25,7 +30,7 @@ function showPopupMajor(){
         }
     }
 
-    major_linksPopup.classList.toggle("is-visible");
+    major_linksPopup.classList.add("is-visible");
 
     if(this.textContent === "Artist"){
         major_linksPopup_content.classList.remove("is-visible")
@@ -116,25 +121,32 @@ for(i=0; i<clickable_item.length; i++){
         });
     }
     if(clickable_item[i].textContent === "Artist"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "Collection"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "Products"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "show all"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "Shipping & Returns"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "Terms & Conditions"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
     if(clickable_item[i].textContent === "About Us"){
-        clickable_item[i].addEventListener("click", showPopupMajor);
+        clickable_item[i].addEventListener("mouseover", showPopupMajor);
+        clickable_item[i].addEventListener("click", hidePopupMajor);
     }
 }
 
@@ -170,3 +182,21 @@ for(i=0; i<socials_icons.length; i++){
         })
     }
 } 
+
+
+// PRODUCT PRODUCT PAGE
+// _________________________________________________________
+
+// sandwich popup on hover
+for(i=0; i<clickable_item.length; i++){
+    if (clickable_item[i].isSameNode(menu_icon)){
+        clickable_item[i].addEventListener("click", () => {
+            sandwich_popup.classList.toggle("is-visible");
+            menu_icon_transition[0].classList.toggle("is-transition");
+            menu_icon_transition[1].classList.toggle("is-transition");
+            menu_icon_transition[2].classList.toggle("is-transition");
+            major_linksPopup.classList.remove("is-visible");
+        });
+    }
+}
+
