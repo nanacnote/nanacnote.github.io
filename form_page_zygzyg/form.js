@@ -10,7 +10,7 @@ var signupForm = document.getElementById("signup-form")
 var formBoxClose = document.querySelector(".form-box-close")
 
 // about popup box controls
-aboutLink[0].addEventListener("mouseover", showAboutMenu);
+aboutLink[0].addEventListener("click", showAboutMenu);
 aboutBoxClose.addEventListener("click", hideAboutMenu);
 
 function showAboutMenu(){
@@ -24,6 +24,7 @@ function hideAboutMenu(){
 }
 
 // sigup form popup controls
+window.addEventListener("load", showSignupForm);
 sigupLink.addEventListener("click", showSignupForm);
 formBoxClose.addEventListener("click", hideSignupForm);
 
