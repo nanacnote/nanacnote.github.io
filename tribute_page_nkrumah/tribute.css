@@ -260,17 +260,23 @@ body{
     padding: 1%;
 }
 
-/* media query section */
-@media only screen and (max-width: 1050px){
-    body{
-        display: none;
-    }
+.sm-display{
+    visibility: hidden;
 }
 
-@media only screen and (max-height: 600px){
-    body{
-        position: relative;
-        height: 100%;
-        overflow: scroll;
+/* media query section */
+@media only screen and (max-width: 1050px){
+    #tribute-info, #title{
+        display: none;
+    }
+
+    .sm-display{
+        visibility: visible;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        color: black;
+        align-items: center;
+        justify-content: center;
     }
 }

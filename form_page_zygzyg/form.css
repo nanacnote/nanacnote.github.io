@@ -410,9 +410,26 @@ textarea{
     }
 }
 
+.sm-display{
+    visibility: hidden;
+}
+
 /* media query section */
-@media only screen and (max-width: 1050px){
-    body{
+@media only screen and (max-width: 800px){
+    #main{
         display: none;
+    }
+    #signup-form{
+        visibility: hidden;
+    }
+
+    .sm-display{
+        visibility: visible;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        color: white;
+        align-items: center;
+        justify-content: center;
     }
 }

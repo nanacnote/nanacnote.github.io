@@ -532,3 +532,24 @@ body {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+.sm-display{
+  visibility: hidden;
+}
+
+/* media query section */
+@media only screen and (max-width: 600px){
+  #landing{
+      display: none;
+  }
+
+  .sm-display{
+      visibility: visible;
+      display: flex;
+      text-align: center;
+      height: 100vh;
+      color: black;
+      align-items: center;
+      justify-content: center;
+  }
+}
