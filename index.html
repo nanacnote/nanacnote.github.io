@@ -16,10 +16,9 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        min-height: 100%;
       }
       .profile-pic {
         display: flex;
@@ -36,8 +35,15 @@
         text-align: center;
         padding: 50px 25%;
       }
+      .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
       a {
         text-decoration: none;
+        color: #40a9ff;
       }
     </style>
   </head>
@@ -50,12 +56,14 @@
           style="width: 275px;"
         />
       </div>
-      <a href="https://github.com/nanacnote">GitHub</a>
-      <a href="https://www.linkedin.com/in/owusu-k-adjei-bohyen-b9b4bb83/"
-        >LinkedIn</a
-      >
-      <a href="https://www.instagram.com/cedi_note/">Instagram</a>
-      <a href="http://www.adjei-bohyen.me">Website</a>
+      <div class="links">
+        <a href="https://github.com/nanacnote">GitHub</a>
+        <a href="https://www.linkedin.com/in/owusu-k-adjei-bohyen-b9b4bb83/"
+          >LinkedIn</a
+        >
+        <a href="https://www.instagram.com/cedi_note/">Instagram</a>
+        <a href="http://www.adjei-bohyen.me">Website</a>
+      </div>
       <div class="quote">
         <span>
           <i>
@@ -64,7 +72,7 @@
           </i>
         </span>
       </div>
-      <div>
+      <div class="quote-by">
         <i> - H P Blavatsky </i>
       </div>
     </div>
